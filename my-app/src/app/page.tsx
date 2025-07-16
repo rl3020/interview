@@ -33,7 +33,7 @@ export default function Home() {
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                TODO: Implement call logs list
+                TODO: Implement call logs table
               </p>
             </CardContent>
           </Card>

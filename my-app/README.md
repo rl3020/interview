@@ -43,7 +43,7 @@ yarn dev
 
 4. **Operator Console**
    - Start Call form with phone number input
-   - Call logs list view
+   - Call logs table view
    - Call detail view with full transcript
 
 5. **API Design**
@@ -71,7 +71,7 @@ src/
 │   ├── ui/               # shadcn/ui components
 │   └── example-api-usage.tsx  # Example of API interaction
 ├── types/                # TypeScript type definitions
-│   └── index.ts         # Basic types to get started
+│   └── index.ts         # Put your types here
 └── lib/                 # Utility functions
 ```
 
@@ -96,12 +96,5 @@ shadcn/ui components are pre-installed:
 - Table
 - Badge
 - Dialog
-
-## Implementation Tips
-
-1. Start by designing your data models and API structure
-2. Create mock data to work with initially
-3. Build the UI components incrementally
-4. Focus on core functionality before adding nice-to-haves
 
 Good luck! Focus on demonstrating your ability to structure a clean, functional application.
