@@ -2,9 +2,9 @@
 import { NextResponse } from "next/server";
 import { VapiClient } from "@vapi-ai/server-sdk";
 
-const ASSISTANT_ID = "9536e304-105c-4365-b922-8ccdaa0d0088";
+const ASSISTANT_ID = "";
 const vapi = new VapiClient({
-  token: "98aa2e5a-a3af-4abf-b881-96a3119bb394",
+  token: "",
 });
 
 export async function POST(request: Request) {
