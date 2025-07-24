@@ -1,50 +1,56 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 // Example component showing how to interact with API endpoints
 // This is for demonstration purposes - candidates should create their own components
 
 export function ExampleApiUsage() {
-  const [data, setData] = useState<any>(null)
-  const [loading, setLoading] = useState(false)
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(false);
 
   const fetchExample = async () => {
-    setLoading(true)
+    setLoading(true);
     try {
-      const response = await fetch('/api/example?id=123')
-      const result = await response.json()
-      setData(result)
+      const response = await fetch("/api/example?id=123");
+      const result = await response.json();
+      setData(result);
     } catch (error) {
-      console.error('Error fetching data:', error)
+      console.error("Error fetching data:", error);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   const postExample = async () => {
-    setLoading(true)
+    setLoading(true);
     try {
-      const response = await fetch('/api/example', {
-        method: 'POST',
+      const response = await fetch("/api/example", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          message: 'Hello from the client!',
-          timestamp: new Date().toISOString()
-        })
-      })
-      const result = await response.json()
-      setData(result)
+          message: "Hello from the client!",
+          timestamp: new Date().toISOString(),
+        }),
+      });
+      const result = await response.json();
+      setData(result);
     } catch (error) {
-      console.error('Error posting data:', error)
+      console.error("Error posting data:", error);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   return (
     <Card>
@@ -73,5 +79,5 @@ export function ExampleApiUsage() {
         </div>
       </CardContent>
     </Card>
-  )
-} 
+  );
+}
